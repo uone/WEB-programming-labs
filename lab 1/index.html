@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулінарний блог</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fffaf5;
+            color: #2f2f2f;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ffb36b, #ff7f50);
+            color: white;
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #f0d7c2;
+            padding: 12px 16px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #9a3f00;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d85c18;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .food-image,
+        figure img {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-top: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #6b6b6b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            background-color: #fff;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #e6cdb8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead,
+        tfoot {
+            background-color: #fff2e6;
+        }
+
+        footer {
+            background: #2f1f17;
+            color: #f7e9dc;
+            margin-top: 32px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 16px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .footer-column h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #ffd2b0;
+        }
+
+        .footer-column p,
+        .footer-column li {
+            margin: 0 0 8px;
+            font-size: 14px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column a {
+            color: #ffe7d3;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            padding: 14px 16px;
+            font-size: 13px;
+            color: #e9d7ca;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Мій кулінарний блог</h1>
+    </header>
+
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li><a href="#breakfast" aria-current="page">Сніданки</a></li>
+            <li><a href="#lunch">Обіди</a></li>
+            <li><a href="#dinner">Вечері</a></li>
+            <li><a href="#dessert">Десерти</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="breakfast">
+            <h2>Сніданки</h2>
+
+            <h3>Корисний початок дня</h3>
+            <p><strong>Сніданок</strong> є важливою частиною раціону, яка дає енергію на весь день.</p>
+            <p>Варто обирати <em>поживні та легкі</em> страви, щоб підтримувати гарне самопочуття.</p>
+
+            <dl>
+                <dt>Омлет</dt>
+                <dd>Страва з яєць, швидка у приготуванні.</dd>
+                <dt>Вівсянка</dt>
+                <dd>Корисна каша з високим вмістом клітковини.</dd>
+                <dt>Йогурт</dt>
+                <dd>Молочний продукт, що сприяє травленню.</dd>
+            </dl>
+
+            <img class="food-image"
+                src="https://food.net.ua/uploads/posts/2024-05/omlet-sytnyi-zavtrak-na-skoruu-ruku_1638597400_17_max.jpg"
+                alt="Омлет на сніданок" title="Смачний сніданок">
+        </section>
+
+        <section id="lunch">
+            <h2>Обіди</h2>
+
+            <h3>Ситні страви</h3>
+            <p><strong>Обід</strong> забезпечує організм основною кількістю енергії.</p>
+            <p>Важливо поєднувати <em>білки, жири та вуглеводи</em> у стравах.</p>
+
+            <dl>
+                <dt>Борщ</dt>
+                <dd>Традиційна українська перша страва.</dd>
+                <dt>Котлети</dt>
+                <dd>М’ясна страва, популярна в багатьох кухнях.</dd>
+                <dt>Рис</dt>
+                <dd>Поживний гарнір до основних страв.</dd>
+            </dl>
+
+            <img class="food-image"
+                src="https://img-recipes.zakaz.ua/215779-560-output1%20(56)%20(1)%20(1).png"
+                alt="Тарілка борщу" title="Смачний обід">
+        </section>
+
+        <section id="dinner">
+            <h2>Вечері</h2>
+
+            <h3>Легкі страви</h3>
+            <p><strong>Вечеря</strong> повинна бути легкою та корисною.</p>
+            <p>Рекомендується вживати <em>овочі, рибу або салати</em>.</p>
+
+            <dl>
+                <dt>Салат</dt>
+                <dd>Легка страва з овочів.</dd>
+                <dt>Риба</dt>
+                <dd>Джерело корисних жирів.</dd>
+                <dt>Кефір</dt>
+                <dd>Напій для покращення травлення.</dd>
+            </dl>
+
+            <img class="food-image"
+                src="https://images.unian.net/photos/2020_12/thumb_files/1200_0_1608721820-6449.jpg"
+                alt="Овочевий салат" title="Легка вечеря">
+        </section>
+
+        <section id="dessert">
+            <h2>Десерти</h2>
+
+            <h3>Солодке задоволення</h3>
+            <p><strong>Десерти</strong> дарують гарний настрій та завершують прийом їжі.</p>
+            <p>Слід вживати їх у <em>помірних кількостях</em>.</p>
+
+            <dl>
+                <dt>Торт</dt>
+                <dd>Святковий солодкий десерт.</dd>
+                <dt>Печиво</dt>
+                <dd>Популярна випічка до чаю.</dd>
+                <dt>Морозиво</dt>
+                <dd>Охолоджений солодкий десерт.</dd>
+            </dl>
+
+            <figure>
+                <img src="https://shuba.life/static/content/thumbs/1824x912/8/fe/tpt7oq---c2x1x50px50p-up--c696e71554f3a9e6e2f23fab9d3d0fe8.jpg"
+                    alt="Шоколадний торт" title="Смачний десерт">
+                <figcaption>Апетитний десерт</figcaption>
+            </figure>
+
+            <h3>Таблиця рецептів</h3>
+            <table>
+                <caption>Популярні рецепти</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Назва</th>
+                        <th scope="col">Час</th>
+                        <th scope="col">Порції</th>
+                        <th scope="col">Калорійність</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Омлет</th>
+                        <td>10 хв</td>
+                        <td>2</td>
+                        <td>200 ккал</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Борщ</th>
+                        <td>60 хв</td>
+                        <td>4</td>
+                        <td>350 ккал</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Салат</th>
+                        <td>15 хв</td>
+                        <td>2</td>
+                        <td>150 ккал</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Торт</th>
+                        <td>90 хв</td>
+                        <td>6</td>
+                        <td>500 ккал</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Дані приблизні</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Кулінарний блог</h3>
+                <p>Натхнення для щоденного меню: прості сніданки, ситні обіди, легкі вечері та улюблені десерти.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Розділи</h3>
+                <ul>
+                    <li><a href="#breakfast">Сніданки</a></li>
+                    <li><a href="#lunch">Обіди</a></li>
+                    <li><a href="#dinner">Вечері</a></li>
+                    <li><a href="#dessert">Десерти</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Корисні посилання</h3>
+                <ul>
+                    <li><a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D1%96%D0%BD%D0%B0%D1%80%D1%96%D1%8F" target="_blank" rel="noopener noreferrer">Про кулінарію</a></li>
+                    <li><a href="https://uk.wikipedia.org/wiki/%D0%91%D0%BE%D1%80%D1%89" target="_blank" rel="noopener noreferrer">Про борщ</a></li>
+                    <li><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%BC%D0%BB%D0%B5%D1%82" target="_blank" rel="noopener noreferrer">Про омлет</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Контакти</h3>
+                <p>Email: info@kulblog.ua</p>
+                <p>Instagram: @kulblog</p>
+                <p>Працюємо для натхнення щодня.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Кулінарний блог. Усі права захищено.
+        </div>
+    </footer>
+
+</body>
+
+</html>
